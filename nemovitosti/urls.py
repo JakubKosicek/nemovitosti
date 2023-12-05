@@ -6,7 +6,9 @@ from django.urls import path, include
 urlpatterns = [
     path("", include("nemovitosti.sledovani.urls")),
     path("admin/", admin.site.urls),
+    path("accounts/", include("django.contrib.auth.urls")),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL)
+
